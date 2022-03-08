@@ -1,6 +1,7 @@
 const greetingContainer = document.getElementById("greeting");
 const loginForm = document.getElementById("login-form");
 const loginInput = document.getElementById("login-input");
+const userName = localStorage.getItem("userName");
 
 function onLogin(event){
     event.preventDefault();
@@ -8,13 +9,21 @@ function onLogin(event){
     const userName = loginInput.value;
     localStorage.setItem("userName", userName);
     
-    loginForm.classList.add("hidden");
-    
-    const greetingUser = document.createElement("h2");
-    greetingUser.innerText = `Hello ${userName}!`;
-
-    greetingContainer.append(greetingUser);
+    greetingUser(userName);
 
 }
 
+function greetingUser(userName){
+    loginForm.classList.add("hidden");
+    
+    const greetingH2 = document.createElement("h2");
+    greetingH2.innerText = `Hello ${userName}!`;
+
+    greetingContainer.append(greetingH2);
+}
+
 loginForm.addEventListener("submit", onLogin);
+
+if(userName){
+    greetingUser(userName);
+}

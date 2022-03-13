@@ -24,6 +24,8 @@ function greetingUser(userName){
 
 loginForm.addEventListener("submit", onLogin);
 
+
+// 이부분 고쳐야 함!!!!!
 if(userName){
     greetingUser(userName);
 }

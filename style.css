@@ -100,21 +100,20 @@ nav {
 }
 
 #todo #todo-list {
+    margin-top: 20px;
     list-style: none;
     color: #fff;
     font-weight: 300;
     font-size: 20px;
 }
 
-#todo #todo-list {
-    margin-top: 20px;
-}
-
 #todo #todo-list li {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     padding: 20px 10px;
 }
+
 
 #todo #todo-list li button {
     cursor: pointer;

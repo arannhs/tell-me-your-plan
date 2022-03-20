@@ -19,6 +19,7 @@ function handleTodos(event){
     saveTodos();
 }
 
+
 function paintTodo(newTodo){
     const li = document.createElement("li");
     li.id = newTodo.id;
